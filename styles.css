@@ -5,10 +5,15 @@
 }
 
 :root {
-  --txt-clr: white;
-  --bg-clr: black;
-  --box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  --txt-clr: black;
+  --bg-clr: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --txt-clr: white;
+    --bg-clr: #0d1117;
+  }
 }
 
 body {
@@ -16,13 +21,59 @@ body {
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: var(--txt-clr);
   background-color: var(--bg-clr);
+  min-height: 100vh;
+  padding: 1em;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --txt-clr: white;
-    --bg-clr: black;
-    --box-shadow: rgba(92, 92, 170, 0.25) 0px 6px 12px -2px,
-      rgba(128, 127, 127, 0.3) 0px 3px 7px -3px;
+.trigger {
+  cursor: pointer;
+  position: relative;
+  width: 125px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.trigger::after {
+  content: 'See more 👇';
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  transition: display 3000ms ease-in-out;
+  position: absolute;
+  display: none;
+  width: 125px;
+  animation: fadeIn 1.25s ease-in-out 0s 1 forwards;
+}
+
+li {
+  border: 1px solid var(--txt-clr);
+  padding: 0.5em;
+  border-radius: 5px;
+  transition: transform 300ms ease-in-out;
+}
+
+li:hover {
+  background-color: lightgray;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.trigger.active + ul {
+  display: block;
+}
+
+.trigger.active::after {
+  content: 'See less 👆';
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
