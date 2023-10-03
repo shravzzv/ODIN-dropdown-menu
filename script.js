@@ -4,5 +4,3 @@ const addDropDownLogicUsingClass = (triggerId, className, event = 'click') => {
   }
   document.getElementById(triggerId).addEventListener(event, handleDropDown)
 }
-
-addDropDownLogicUsingClass('trigger', 'active')
