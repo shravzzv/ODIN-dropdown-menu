@@ -31,6 +31,10 @@ body {
   width: 125px;
   height: 50px;
   border-radius: 5px;
+  background-color: #292a2b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .trigger::after {
@@ -45,7 +49,7 @@ ul {
   position: absolute;
   display: none;
   width: 125px;
-  animation: fadeIn 1.25s ease-in-out 0s 1 forwards;
+  animation: fadeIn 300ms ease-in-out 0s 1 forwards;
 }
 
 li {
@@ -68,6 +72,12 @@ li:hover {
 .trigger.active::after {
   content: 'See less 👆';
 }
+
+/* ! fix why hover isn't working */
+/* .trigger:hover + ul,
+.trigger:hover + ul > li {
+  display: block;
+} */
 
 @keyframes fadeIn {
   0% {

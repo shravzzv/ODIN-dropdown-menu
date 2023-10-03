@@ -1,0 +1,21 @@
+{
+  "name": "add-dropdown-logic",
+  "version": "1.0.0",
+  "description": "You know what we’re talking about here. Picture a nav-bar or a button and when you click it the menu slides down nicely. As mentioned previously, you already know everything you need to create this element. Here are some things to keep in mind:",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sai Shravan <shravzzv@outlook.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shravzzv/ODIN-dropdown-menu"
+  },
+  "keywords": [
+    "dropdown"
+  ],
+  "devDependencies": {
+    "add-dropdown-logic": "^1.0.0"
+  }
+}

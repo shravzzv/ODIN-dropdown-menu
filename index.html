@@ -6,10 +6,9 @@
     <title>Drop Down Menus</title>
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
   </head>
   <body>
-    <button class="trigger">&nbsp;</button>
+    <div class="trigger" id="trigger">&nbsp;</div>
     <ul>
       <li>item01</li>
       <li>item02</li>
@@ -17,5 +16,9 @@
       <li>item04</li>
       <li>item05</li>
     </ul>
+    <script src="script.js"></script>
+    <script>
+      addDropDownLogicUsingClass('trigger', 'active')
+    </script>
   </body>
 </html>
