@@ -1,7 +1,8 @@
-const triggerEl = document.querySelector('.trigger')
-
-const handleDropDown = () => {
-  triggerEl.classList.toggle('active')
+const addDropDownLogicUsingClass = (triggerId, className, event = 'click') => {
+  const handleDropDown = (e) => {
+    e.target.classList.toggle(className)
+  }
+  document.getElementById(triggerId).addEventListener(event, handleDropDown)
 }
 
-triggerEl.addEventListener('click', handleDropDown)
+addDropDownLogicUsingClass('trigger', 'active')
